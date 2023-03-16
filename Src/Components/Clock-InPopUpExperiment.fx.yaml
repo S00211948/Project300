@@ -1,0 +1,56 @@
+"'Clock-InPopUpExperiment' As CanvasComponent":
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =259
+        Width: =640
+        Y: =146
+        ZIndex: =1
+
+    Label10 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Clock - In?"
+        Underline: =true
+        Width: =640
+        Y: =170
+        ZIndex: =2
+
+    Label10_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="You are timetabled for "
+        Underline: =true
+        Width: =640
+        Y: =235
+        ZIndex: =3
+
+    "Icon2 As icon.'3DPrinting'":
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(127, 178, 57, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =100
+        Icon: =Icon.CheckBadge
+        Width: =100
+        X: =270
+        Y: =305
+        ZIndex: =4
+

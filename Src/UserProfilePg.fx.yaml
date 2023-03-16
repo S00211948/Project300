@@ -1,0 +1,216 @@
+UserProfilePg As screen:
+    BackgroundImage: =
+    ImagePosition: =ImagePosition.Fill
+
+    Button5 As button:
+        BorderThickness: =5
+        Color: =RGBA(98, 201, 227, 1)
+        DisabledBorderColor: =RGBA(98, 201, 227, 1)
+        DisabledColor: =RGBA(61, 212, 182, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(98, 201, 227, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =163
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        Size: =24
+        Text: =""
+        Width: =546
+        X: =50
+        Y: =578
+        ZIndex: =1
+
+    ProfileImgUP As image:
+        BorderColor: =RGBA(255, 255, 255, 1)
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =410
+        Image: =If(IsBlank(EmployeeRecord.ProfilePicture), SampleImage, EmployeeRecord.ProfilePicture)
+        Width: =437
+        X: =101
+        Y: =144
+        ZIndex: =2
+
+    Label8 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =87
+        Size: =30
+        Text: =If(IsBlank(EmployeeRecord.Name), "Employee Name Cannot Be Found", EmployeeRecord.Name)
+        Width: =640
+        Y: =596
+        ZIndex: =3
+
+    Button2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(98, 201, 227, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        Size: =24
+        Text: ="Statistics"
+        Width: =280
+        X: =24
+        Y: =1047
+        ZIndex: =4
+
+    Button3 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(98, 201, 227, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        Size: =24
+        Text: ="Edit Profile"
+        Width: =280
+        X: =335
+        Y: =1047
+        ZIndex: =5
+
+    Label8_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =50
+        Size: =25
+        Text: =If(IsBlank(EmployeeRecord.Email), "Email Cannot Be Found", EmployeeRecord.Email)
+        Underline: =true
+        Width: =640
+        Y: =679
+        ZIndex: =6
+
+    NavbarUserProfilePg As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =12
+
+        Rectangle1_4 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =5
+            Width: =640
+            Y: =87
+            ZIndex: =7
+
+        Button1_8 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 102, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Navigate(TimetablePg)
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Size: =24
+            Text: ="Timetable"
+            Visible: =ctxWaffle1open
+            Width: =640
+            Y: =144
+            ZIndex: =8
+
+        Button2_8 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 102, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Navigate(HomePg)
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Size: =24
+            Text: ="Home"
+            Visible: =ctxWaffle1open
+            Width: =640
+            Y: =74
+            ZIndex: =9
+
+        "Icon2_8 As icon.'3DPrinting'":
+            BorderColor: =RGBA(0, 51, 102, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.OptionsList
+            OnSelect: |-
+                =UpdateContext( { ctxWaffle1open: !ctxWaffle1open } )
+            X: =288
+            Y: =8
+            ZIndex: =10
+
+        Button3_8 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 102, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Navigate(RequestsHomePg)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Requests"
+            Visible: =ctxWaffle1open
+            Width: =640
+            Y: =214
+            ZIndex: =11
+
+        Image2_4 As image:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =61
+            Image: ='1946488'
+            OnSelect: =Navigate(HomePg)
+            Width: =104
+            Y: =12
+            ZIndex: =12
+
+    Label17 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =47
+        Size: =30
+        Text: ="HR Management"
+        Width: =381
+        X: =129
+        Y: =13
+        ZIndex: =13
+
+    Circle2_1 As circle:
+        BorderColor: =RGBA(98, 201, 227, 1)
+        BorderThickness: =10
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =410
+        Width: =405
+        X: =117
+        Y: =144
+        ZIndex: =14
+
