@@ -1,0 +1,154 @@
+PowerBITesting As screen:
+    BackgroundImage: =
+    ImagePosition: =ImagePosition.Fill
+    OnVisible: |
+        =If(
+            showApproved = Blank(),
+            UpdateContext({showApproved: "Unreviewed"})
+        );
+        RefreshStats.Run();
+
+    EmployeeStatsBI As powerbi:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DashboardId: ="6d01c54b-0cc7-4b82-a657-c1944ee2ebf9"
+        Height: =567
+        TileUrl: |-
+            ="https://app.powerbi.com/embed?dashboardId=6d01c54b-0cc7-4b82-a657-c1944ee2ebf9&tileId=4192ce51-10f5-4293-bb75-9d9886d67078&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLU5PUlRILUVVUk9QRS1RLVBSSU1BUlktcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQiLCJlbWJlZEZlYXR1cmVzIjp7Im1vZGVybkVtYmVkIjpmYWxzZX19"
+        WorkspaceId: ="__my-workspace"
+        Y: =89
+        ZIndex: =1
+
+    Button3_18 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(PowerBITesting)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =24
+        Text: ="Statistics"
+        Visible: =ctxWaffle1open
+        Width: =640
+        Y: =284
+        ZIndex: =8
+
+    NavbarRequestsHomePg_4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =8
+
+        Rectangle1_12 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            Height: =5
+            Width: =640
+            Y: =87
+            ZIndex: =2
+
+        Button1_16 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 102, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Navigate(TimetablePg)
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Size: =24
+            Text: ="Timetable"
+            Visible: =ctxWaffle1open
+            Width: =640
+            Y: =144
+            ZIndex: =3
+
+        Button2_16 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 102, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Navigate(HomePg)
+            RadiusBottomLeft: =
+            RadiusBottomRight: =
+            RadiusTopLeft: =
+            RadiusTopRight: =
+            Size: =24
+            Text: ="Home"
+            Visible: =ctxWaffle1open
+            Width: =640
+            Y: =74
+            ZIndex: =4
+
+        "Icon2_16 As icon.'3DPrinting'":
+            BorderColor: =RGBA(0, 51, 102, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.OptionsList
+            OnSelect: |-
+                =UpdateContext( { ctxWaffle1open: !ctxWaffle1open } )
+            X: =288
+            Y: =12
+            ZIndex: =5
+
+        Button3_16 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 102, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Navigate(RequestsPgMr)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Requests"
+            Visible: =ctxWaffle1open
+            Width: =640
+            Y: =214
+            ZIndex: =6
+
+        Image2_12 As image:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =64
+            Image: ='1946488'
+            OnSelect: =Navigate(HomePg)
+            Width: =85
+            X: =20
+            Y: =12
+            ZIndex: =7
+
+    Image1_3 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =76
+        Image: =EmployeeRecord.ProfilePicture
+        Width: =65
+        X: =554
+        Y: =8
+        ZIndex: =9
+

@@ -1,0 +1,60 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cref9_requeststbl_forms",
+      "Namespace": "RequestsTBLS (Forms)",
+      "Values": {
+        "Information": "e9ca79f5-505c-4f5b-b6f9-ef5b999f89e4"
+      }
+    },
+    {
+      "Kind": "default.cds_cref9_requesttype_forms",
+      "Namespace": "RequestTypeTBLS (Forms)",
+      "Values": {
+        "Information": "80f38eca-e317-4b8f-9a79-e3e46adbad86"
+      }
+    },
+    {
+      "Kind": "default.cds_cref9_trialtbl_forms",
+      "Namespace": "TrialTBLS (Forms)",
+      "Values": {
+        "Information": "c7f385f6-449e-47f3-9268-e8daea77e285"
+      }
+    },
+    {
+      "Kind": "default.cds_cref9_employeetbl_forms",
+      "Namespace": "EmployeeTBLS (Forms)",
+      "Values": {
+        "Information": "8d0a0728-04c3-4249-a017-ece8f95a97bf"
+      }
+    },
+    {
+      "Kind": "default.cds_cref9_useraccountstbl_forms",
+      "Namespace": "UserAccountsTBLS (Forms)",
+      "Values": {
+        "Information": "f283a16e-3590-4f83-a6b0-63e62d40877d"
+      }
+    },
+    {
+      "Kind": "default.cds_cref9_employeetimetabletbl_forms",
+      "Namespace": "EmployeeTimetableTBLS_1 (Forms)",
+      "Values": {
+        "Information": "84d06d6c-e3cd-4efd-8ded-a5289455206a"
+      }
+    },
+    {
+      "Kind": "default.cds_cref9_roletbl_forms",
+      "Namespace": "RoleTBLS (Forms)",
+      "Values": {
+        "Information": "bbbccac9-605e-449a-82c4-f7f9d5046384"
+      }
+    },
+    {
+      "Kind": "default.cds_cref9_weeklyrostertbl_forms",
+      "Namespace": "EmployeeTimetableTBLS (Forms)",
+      "Values": {
+        "Information": "9fab4eb6-4c8e-4a5c-82e0-ce5377fe38fc"
+      }
+    }
+  ]
+}

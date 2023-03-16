@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cref9_employeetimetabletbls",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cref9_employeetimetabletbl",
+    "MaxGetRowsCount": 500,
+    "Name": "EmployeeTimetableTBLS_1",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "cref9_clockin": "Clock-In",
+      "cref9_clockout": "Clock-Out",
+      "cref9_dayid": "Clock-InID",
+      "cref9_employeeid": "EmployeeID",
+      "cref9_employeetimetabletbl_AsyncOperations": "System Jobs",
+      "cref9_employeetimetabletbl_BulkDeleteFailures": "Bulk Delete Failures",
+      "cref9_employeetimetabletbl_DuplicateBaseRecord": "Duplicate Records (cref9_employeetimetabletbl_DuplicateBaseRecord)",
+      "cref9_employeetimetabletbl_DuplicateMatchingRecord": "Duplicate Records (cref9_employeetimetabletbl_DuplicateMatchingRecord)",
+      "cref9_employeetimetabletbl_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cref9_employeetimetabletbl_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cref9_employeetimetabletbl_ProcessSession": "Process Sessions",
+      "cref9_employeetimetabletbl_SyncErrors": "Sync Errors",
+      "cref9_employeetimetabletblid": "EmployeeTimetableTBL",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "EmployeeTimetableTBLS_1",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "EmployeeTimetableTBLS_1 (Views)",
+    "Name": "_cref9_employeetimetabletbl_views",
+    "RelatedEntityName": "EmployeeTimetableTBLS_1",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3dafc918-4278-4e1a-b8b2-1b94a7bb8e69": "EmployeeTimetableTBL Associated View",
+      "919fec68-a00a-4b7c-8772-0beab05909d4": "Inactive EmployeeTimetableTBLS",
+      "a1aefdce-ce38-4cbc-8629-03a104fa9f1c": "EmployeeTimetableTBL Advanced Find View",
+      "e918bbf1-7be5-4b95-a58c-cb265fd1f261": "EmployeeTimetableTBL Lookup View",
+      "f0d919e2-b325-40a8-a57d-648b19c6f198": "Active EmployeeTimetableTBLS"
+    }
+  },
+  {
+    "DisplayName": "Status (EmployeeTimetableTBLS_1)",
+    "Name": "cref9_employeetimetabletbl_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "EmployeeTimetableTBLS_1"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "EmployeeTimetableTBLS_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (EmployeeTimetableTBLS_1)",
+    "Name": "cref9_employeetimetabletbl_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "EmployeeTimetableTBLS_1"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "EmployeeTimetableTBLS_1",
+    "Type": "OptionSetInfo"
+  }
+]
