@@ -250,7 +250,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "ColumnChartSample",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "Items",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -288,7 +288,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"cr9f1_name\",\"Series1\":\"BradfordFactor\",\"Series2\":\"Instances\",\"Series3\":\"TotalDays\",\"Series4\":\"TotalDays\",\"Series5\":\"TotalDays\",\"Series6\":\"TotalDays\",\"Series7\":\"TotalDays\",\"Series8\":\"TotalDays\",\"Series9\":\"TotalDays\"}",
+          "NameMap": "{\"Labels\":\"cr9f1_name\",\"Series1\":\"BradfordFactor\",\"Series2\":\"TotalDays\",\"Series3\":\"TotalDays\",\"Series4\":\"TotalDays\",\"Series5\":\"TotalDays\",\"Series6\":\"TotalDays\",\"Series7\":\"TotalDays\",\"Series8\":\"TotalDays\",\"Series9\":\"TotalDays\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },

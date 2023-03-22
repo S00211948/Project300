@@ -50,13 +50,6 @@
       }
     },
     {
-      "Kind": "default.cds_cref9_weeklyrostertbl_forms",
-      "Namespace": "EmployeeTimetableTBLS (Forms)",
-      "Values": {
-        "Information": "9fab4eb6-4c8e-4a5c-82e0-ce5377fe38fc"
-      }
-    },
-    {
       "Kind": "default.cds_cr9f1_request_forms",
       "Namespace": "Requests (Forms)",
       "Values": {
@@ -68,6 +61,13 @@
       "Namespace": "Employees (Forms)",
       "Values": {
         "Information": "76f73a60-9083-4993-8364-dbec84a7617c"
+      }
+    },
+    {
+      "Kind": "default.cds_cref9_weeklyrostertbl_forms",
+      "Namespace": "EmployeeTimetableTBLS (Forms)",
+      "Values": {
+        "Information": "9fab4eb6-4c8e-4a5c-82e0-ce5377fe38fc"
       }
     }
   ]

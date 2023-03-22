@@ -3,6 +3,8 @@ GlobalStatisticsPgMr As screen:
     OnVisible: |-
         =//AddColumns(GroupBy(Requests, "cr9f1_name", "RequestData"), "Instances", CountRows(RequestData),
         //"TotalDays", Sum(RequestData, NoOfDays));
+        ClearCollect(RequestData, AddColumns(GroupBy(Requests, "cr9f1_name", "cr9f1_noofdays", "Data"), "Instances", CountRows(Data),
+        "TotalDays", Sum(Data, cr9f1_noofdays)));
         ClearCollect(RequestData, AddColumns(GroupBy(Requests, "cr9f1_name", "Data"), "Instances", CountRows(Data),
         "TotalDays", Sum(Data, cr9f1_noofdays)));
         AddColumns(RequestData, "BradfordFactor", 
@@ -67,16 +69,16 @@ GlobalStatisticsPgMr As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
             Items: |-
-                =AddColumns(RequestData, "BradfordFactor", 
-                        Instances * Instances * TotalDays)
-                /*FirstN(
-                    SortByColumns(
+                =/*FirstN(
+                    Filter(
                         RequestData,
-                        "BradfordFactor",
+                        TotalDays*Instances*Instances,      
                         SortOrder.Descending
-                ),
-                5
+                    ),
+                    5
                 )*/
+                AddColumns(RequestData, "BradfordFactor", 
+                        Instances * Instances * TotalDays)
             Width: =640
             Y: =524
             ZIndex: =7
@@ -102,13 +104,10 @@ GlobalStatisticsPgMr As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =//GroupBy(Requests, "cr9f1_name", "RequestData");
-            //Trace(Text(Sum(RequestData, NoOfDays)));
-            
-            //ClearCollect(RequestData, AddColumns(GroupBy(Requests, "cr9f1_name", "Data"), "Instances", CountRows(Data),
-            //"TotalDays", Sum(Data, cr9f1_noofdays)));
-            
-            //Trace(Text(Sum(RequestData,TotalDays)))
+            =ClearCollect(RequestData, AddColumns(GroupBy(Requests, "cr9f1_name", "cr9f1_noofdays", "Data"), "Instances", CountRows(Data),
+            "TotalDays", Sum(Data, cr9f1_noofdays)));
+            ClearCollect(RequestData, AddColumns(GroupBy(Requests, "cr9f1_name", "Data"), "Instances", CountRows(Data),
+            "TotalDays", Sum(Data, cr9f1_noofdays)));
         Size: =24
         Text: ="Button"
         Width: =280
