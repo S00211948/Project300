@@ -1,7 +1,7 @@
 {
   "DatasetName": "default.cds",
   "EntityName": "EmployeeTBLS",
-  "InstanceUrl": "https://org1e5ecaa4.crm4.dynamics.com/",
+  "InstanceUrl": "https://org7b046939.crm4.dynamics.com/",
   "LocalReferenceDSJson": {
     "entitySetName": "cref9_employeetbls",
     "logicalName": "cref9_employeetbl"

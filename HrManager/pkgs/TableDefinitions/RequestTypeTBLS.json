@@ -1,7 +1,7 @@
 {
   "DatasetName": "default.cds",
   "EntityName": "RequestTypeTBLS",
-  "InstanceUrl": "https://org1e5ecaa4.crm4.dynamics.com/",
+  "InstanceUrl": "https://org7b046939.crm4.dynamics.com/",
   "LocalReferenceDSJson": {
     "entitySetName": "cref9_requesttypes",
     "logicalName": "cref9_requesttype"

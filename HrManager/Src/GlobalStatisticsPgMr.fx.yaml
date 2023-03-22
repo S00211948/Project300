@@ -1,5 +1,12 @@
 GlobalStatisticsPgMr As screen:
     Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: |-
+        =//AddColumns(GroupBy(Requests, "cr9f1_name", "RequestData"), "Instances", CountRows(RequestData),
+        //"TotalDays", Sum(RequestData, NoOfDays));
+        ClearCollect(RequestData, AddColumns(GroupBy(Requests, "cr9f1_name", "Data"), "Instances", CountRows(Data),
+        "TotalDays", Sum(Data, cr9f1_noofdays)));
+        AddColumns(RequestData, "BradfordFactor", 
+                Instances * Instances * TotalDays)
 
     CompositePieChart1_1 As group:
         Height: =5
@@ -21,7 +28,9 @@ GlobalStatisticsPgMr As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             Height: =417
             ItemColorSet: =[RGBA(255, 0, 0, 0.3),RGBA(990,66,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-            Items: =AddColumns(GroupBy(RequestsTBLS, "cref9_employeeid", "RequestData"), "TotalRequests", CountRows(RequestData), "EmployeeName", LookUp(EmployeeTBLS, ID = cref9_employeeid).Name)
+            Items: |-
+                =AddColumns(GroupBy(Requests, "cr9f1_name", "RequestData"), "TotalRequests", CountRows(RequestData))
+                //, "EmployeeName", LookUp(EmployeeTBLS, ID = cref9_employeeid).Name)
             Width: =412
             ZIndex: =3
 
@@ -58,9 +67,16 @@ GlobalStatisticsPgMr As screen:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
             Items: |-
-                =AddColumns(GroupBy(RequestsTBLS, "cref9_employeeid", "RequestData"), "BradfordFactor", 
-                (CountRows(RequestData) * CountRows(RequestData) * Sum(RequestData, Days))
-                , "EmployeeName", LookUp(EmployeeTBLS, ID = cref9_employeeid).Name)
+                =AddColumns(RequestData, "BradfordFactor", 
+                        Instances * Instances * TotalDays)
+                /*FirstN(
+                    SortByColumns(
+                        RequestData,
+                        "BradfordFactor",
+                        SortOrder.Descending
+                ),
+                5
+                )*/
             Width: =640
             Y: =524
             ZIndex: =7
@@ -86,8 +102,13 @@ GlobalStatisticsPgMr As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =GroupBy(RequestsTBLS, "cref9_employeeid", "RequestData");
-            Trace(Text(Sum(RequestsTBLS, Days)));
+            =//GroupBy(Requests, "cr9f1_name", "RequestData");
+            //Trace(Text(Sum(RequestData, NoOfDays)));
+            
+            //ClearCollect(RequestData, AddColumns(GroupBy(Requests, "cr9f1_name", "Data"), "Instances", CountRows(Data),
+            //"TotalDays", Sum(Data, cr9f1_noofdays)));
+            
+            //Trace(Text(Sum(RequestData,TotalDays)))
         Size: =24
         Text: ="Button"
         Width: =280

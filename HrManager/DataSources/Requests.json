@@ -1,0 +1,122 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr9f1_requests",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr9f1_request",
+    "Name": "Requests",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr9f1_approved": "Approved Status",
+      "cr9f1_cr9f1_instancesofleave_instances_cr9f1_re": "InstancesOfLeaves",
+      "cr9f1_enddate": "EndDate",
+      "cr9f1_name": "Name",
+      "cr9f1_noofdays": "NoOfDays",
+      "cr9f1_request_AsyncOperations": "System Jobs",
+      "cr9f1_request_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr9f1_request_DuplicateBaseRecord": "Duplicate Records (cr9f1_request_DuplicateBaseRecord)",
+      "cr9f1_request_DuplicateMatchingRecord": "Duplicate Records (cr9f1_request_DuplicateMatchingRecord)",
+      "cr9f1_request_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr9f1_request_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr9f1_request_ProcessSession": "Process Sessions",
+      "cr9f1_request_SyncErrors": "Sync Errors",
+      "cr9f1_requestid": "Request",
+      "cr9f1_startdate": "StartDate",
+      "cr9f1_type": "Type",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Requests",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Requests (Views)",
+    "Name": "_cr9f1_request_views",
+    "RelatedEntityName": "Requests",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2b739a14-b5be-4c11-aeb2-8fba3248264b": "Request Lookup View",
+      "5427af82-09b6-4a32-b19b-e4b026b91354": "Request Advanced Find View",
+      "644ef8b6-977f-48f8-bda1-656a000f5306": "Active Requests",
+      "8bf94304-9fa3-40d2-acb9-d8b92a866d99": "Request Associated View",
+      "f066e4d6-445c-4ea7-82ea-5c9dc63d85aa": "Inactive Requests"
+    }
+  },
+  {
+    "DisplayName": "Approved Status (Requests)",
+    "Name": "cr9f1_request_cr9f1_approved",
+    "OptionSetInfoNameMapping": {
+      "0": "Unapproved",
+      "1": "Approved"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr9f1_approved",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cr9f1_approved",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Requests)",
+    "Name": "cr9f1_request_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Requests)",
+    "Name": "cr9f1_request_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Requests"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Requests",
+    "Type": "OptionSetInfo"
+  }
+]

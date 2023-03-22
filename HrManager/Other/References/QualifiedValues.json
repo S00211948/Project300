@@ -55,6 +55,20 @@
       "Values": {
         "Information": "9fab4eb6-4c8e-4a5c-82e0-ce5377fe38fc"
       }
+    },
+    {
+      "Kind": "default.cds_cr9f1_request_forms",
+      "Namespace": "Requests (Forms)",
+      "Values": {
+        "Information": "92362652-af7b-4155-9e63-bd3ae4f37ae1"
+      }
+    },
+    {
+      "Kind": "default.cds_cr9f1_employee_forms",
+      "Namespace": "Employees (Forms)",
+      "Values": {
+        "Information": "76f73a60-9083-4993-8364-dbec84a7617c"
+      }
     }
   ]
 }
